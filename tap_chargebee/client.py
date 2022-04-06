@@ -38,6 +38,7 @@ class ChargebeeClient(BaseClient):
         if self.config.get('user_agent'):
             headers['User-Agent'] = self.config.get('user_agent')
 
+        headers['cb-integ-value'] = 'stitch'
         return headers
 
     def get_params(self, params):
